@@ -2,6 +2,8 @@ var express = require ('express');
 
 var app = express();
 
+var port = process.env.PORT || 3000;
+
 exports.start = function(){
     
     app.get('/', function(req, res){
@@ -9,7 +11,7 @@ exports.start = function(){
         res.send('Hello world');
     });
     
-    app.listen(3000, function(){
+    app.listen(port, function(){
         
         console.log('server running');
         
